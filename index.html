@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda de Contactos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="sidebar">
+      <h1>Contacts</h1>
+      <div>
+        <form id="search-form" role="search">
+          <input
+            id="q"
+            aria-label="Search contacts"
+            placeholder="Search"
+            type="search"
+            name="q"
+          />
+          <div id="search-spinner" aria-hidden="true" hidden></div>
+          <div class="sr-only" aria-live="polite"></div>
+        </form>
+        <form method="post" id="create-contact-form">
+          <input
+            placeholder="First name"
+            aria-label="First name"
+            type="text"
+            name="nombre"
+          />
+          <input
+            placeholder="Last name"
+            aria-label="Last name"
+            type="text"
+            name="apellido"
+          />
+          <input
+            placeholder="Phone number"
+            aria-label="Phone number"
+            type="text"
+            name="telefono"
+          />
+          <button type="submit">New</button>
+        </form>
+      </div>
+      <nav id="contact-list-container">
+        <ul id="contact-list">
+          <!-- Contacts will be dynamically inserted here -->
+        </ul>
+      </nav>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
